@@ -1,0 +1,52 @@
+///reply or add card
+.sendingCard {
+  padding-top: 25px;
+  .avatar {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 85px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .inputField {
+    width: 100%;
+    textarea {
+      width: 100%;
+      min-height: 95px;
+      padding: 10px 15px;
+      resize: none;
+      border: 1px solid $dBlue;
+      border-radius: 6px;
+    }
+  }
+  button {
+    display: inline-block;
+    padding: 0;
+    flex-shrink: 0;
+    height: 48px;
+    width: 104px;
+    margin-left: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $mBlue;
+    color: white;
+  }
+}
+
+.replyCard {
+}
+.nestedReplyCard {
+  width: 640px;
+}
+.addCommentCard {
+}

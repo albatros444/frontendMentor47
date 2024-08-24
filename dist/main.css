@@ -16,7 +16,7 @@ body {
   padding: 0;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
-  /* //position: relative; ///for footer with absolute position --> */
+  position: relative;
 }
 body h1,
 body h2,
@@ -59,6 +59,163 @@ ul {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  background-color: white;
+}
+.card p {
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  color: hsl(211, 10%, 45%);
+}
+
+.commentCard .votingSec {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  flex-shrink: 0;
+}
+.commentCard .votingSec .buttonsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 100px;
+  width: 40px;
+  margin-top: 25px;
+  border-radius: 7px;
+  background-color: hsl(228, 33%, 97%);
+}
+.commentCard .votingSec .buttonsBox p {
+  text-align: center;
+  font-weight: 500;
+  color: hsl(238, 40%, 52%);
+}
+.commentCard .mainSec__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}
+.commentCard .mainSec__header p {
+  padding-bottom: 6px;
+}
+.commentCard .mainSec__header__left {
+  display: flex;
+  align-items: end;
+}
+.commentCard .mainSec__header__left .avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+.commentCard .mainSec__header__left .name {
+  margin-right: 15px;
+  font-weight: 500;
+  color: hsl(212, 24%, 26%);
+}
+.commentCard .mainSec__header__left .howLongAgo {
+  font-weight: 400;
+}
+.commentCard .mainSec__header__right button {
+  padding-bottom: 4px;
+  font-size: 17px;
+  font-weight: 600;
+  color: hsl(238, 40%, 52%);
+}
+.commentCard .mainSec__header__right button img {
+  margin-bottom: -2px;
+  padding-right: 8px;
+}
+.commentCard .mainSec .body {
+  padding-bottom: 15px;
+}
+
+.nestedComment {
+  width: 640px;
+}
+
+.sendingCard {
+  padding-top: 25px;
+}
+.sendingCard .avatar {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 85px;
+}
+.sendingCard .avatar img {
+  width: 40px;
+  height: 40px;
+}
+.sendingCard .inputField {
+  width: 100%;
+}
+.sendingCard .inputField textarea {
+  width: 100%;
+  min-height: 95px;
+  padding: 10px 15px;
+  resize: none;
+  border: 1px solid hsl(212, 24%, 26%);
+  border-radius: 6px;
+}
+.sendingCard button {
+  display: inline-block;
+  padding: 0;
+  flex-shrink: 0;
+  height: 48px;
+  width: 104px;
+  margin-left: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: hsl(238, 40%, 52%);
+  color: white;
+}
+
+.nestedReplyCard {
+  width: 640px;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: hsl(228, 33%, 97%);
+}
+.background .cardsColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 730px;
+}
+
+button {
+  display: inline-block;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  background: none;
 }
 
 /*# sourceMappingURL=main.css.map */

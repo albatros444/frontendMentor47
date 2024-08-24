@@ -20,6 +20,187 @@
     <title>Frontend Mentor | Interactive comments section</title>
   </head>
   <body>
+    <div class="background">
+      <div class="cardsColumn">
+        <!-- ////////comment card 1/// -->
+        <div class="card commentCard">
+          <div class="votingSec">
+            <div class="buttonsBox">
+              <button><img src="/images/icon-plus.svg" alt="" /></button>
+              <p class="votesCount">12</p>
+              <button><img src="/images/icon-minus.svg" alt="" /></button>
+            </div>
+          </div>
+          <div class="mainSec">
+            <div class="mainSec__header">
+              <div class="mainSec__header__left">
+                <img
+                  class="avatar"
+                  src="/images/avatars/image-amyrobson.png"
+                  alt=""
+                />
+                <p class="name">amyrobson</p>
+                <p class="howLongAgo">1 month ago</p>
+              </div>
+              <div class="mainSec__header__right">
+                <button>
+                  <img src="/images/icon-reply.svg" alt="" />Reply
+                </button>
+              </div>
+            </div>
+            <div class="mainSec__body">
+              <p>
+                Impressive! sum dolor, sit amet consectetur adipisicing elit.
+                Possimus laboriosam ad doloribus, voluptatum minus magni
+                molestiae suscipit facere eius! Facilis nam nihil odio accusamus
+                dicta, voluptatibus corrupti ipsa illo quibusdam.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- ///reply card//// -->
+        <div class="card sendingCard replyCard">
+          <div class="avatar">
+            <img src="/images/avatars/image-amyrobson.png" alt="" />
+          </div>
+          <div class="inputField">
+            <textarea name="" id=""></textarea>
+          </div>
+          <button>reply</button>
+        </div>
+        <!-- ///////comment card 2//////// -->
+        <div class="card commentCard">
+          <div class="votingSec">
+            <div class="buttonsBox">
+              <button><img src="/images/icon-plus.svg" alt="" /></button>
+              <p class="votesCount">12</p>
+              <button><img src="/images/icon-minus.svg" alt="" /></button>
+            </div>
+          </div>
+          <div class="mainSec">
+            <div class="mainSec__header">
+              <div class="mainSec__header__left">
+                <img
+                  class="avatar"
+                  src="/images/avatars/image-amyrobson.png"
+                  alt=""
+                />
+                <p class="name">amyrobson</p>
+                <p class="howLongAgo">1 month ago</p>
+              </div>
+              <div class="mainSec__header__right">
+                <button>
+                  <img src="/images/icon-reply.svg" alt="" />Reply
+                </button>
+              </div>
+            </div>
+            <div class="mainSec__body">
+              <p>
+                Impressive! sum dolor, sit amet consectetur adipisicing elit.
+                Possimus laboriosam ad doloribus, voluptatum minus magni
+                molestiae suscipit facere eius! Facilis nam nihil odio accusamus
+                dicta, voluptatibus corrupti ipsa illo quibusdam.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- ////end of card///// -->
+        <!-- ///nested comment card 1//// -->
+        <div class="card commentCard nestedComment">
+          <div class="votingSec">
+            <div class="buttonsBox">
+              <button><img src="/images/icon-plus.svg" alt="" /></button>
+              <p class="votesCount">12</p>
+              <button><img src="/images/icon-minus.svg" alt="" /></button>
+            </div>
+          </div>
+          <div class="mainSec">
+            <div class="mainSec__header">
+              <div class="mainSec__header__left">
+                <img
+                  class="avatar"
+                  src="/images/avatars/image-amyrobson.png"
+                  alt=""
+                />
+                <p class="name">amyrobson</p>
+                <p class="howLongAgo">1 month ago</p>
+              </div>
+              <div class="mainSec__header__right">
+                <button>
+                  <img src="/images/icon-reply.svg" alt="" />Reply
+                </button>
+              </div>
+            </div>
+            <div class="mainSec__body">
+              <p>
+                Impressive! sum dolor, sit amet consectetur adipisicing elit.
+                Possimus laboriosam ad doloribus, voluptatum minus magni
+                molestiae suscipit facere eius! Facilis nam nihil odio accusamus
+                dicta, voluptatibus corrupti ipsa illo quibusdam.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- ///nested reply card//// -->
+        <div class="card sendingCard nestedReplyCard">
+          <div class="avatar">
+            <img src="/images/avatars/image-amyrobson.png" alt="" />
+          </div>
+          <div class="inputField">
+            <textarea name="" id=""></textarea>
+          </div>
+          <button>reply</button>
+        </div>
+        <!-- ///nested comment card 2//// -->
+        <div class="card commentCard nestedComment">
+          <div class="votingSec">
+            <div class="buttonsBox">
+              <button><img src="/images/icon-plus.svg" alt="" /></button>
+              <p class="votesCount">12</p>
+              <button><img src="/images/icon-minus.svg" alt="" /></button>
+            </div>
+          </div>
+          <div class="mainSec">
+            <div class="mainSec__header">
+              <div class="mainSec__header__left">
+                <img
+                  class="avatar"
+                  src="/images/avatars/image-amyrobson.png"
+                  alt=""
+                />
+                <p class="name">amyrobson</p>
+                <p class="howLongAgo">1 month ago</p>
+              </div>
+              <div class="mainSec__header__right">
+                <button>
+                  <img src="/images/icon-reply.svg" alt="" />Reply
+                </button>
+              </div>
+            </div>
+            <div class="mainSec__body">
+              <p>
+                Impressive! sum dolor, sit amet consectetur adipisicing elit.
+                Possimus laboriosam ad doloribus, voluptatum minus magni
+                molestiae suscipit facere eius! Facilis nam nihil odio accusamus
+                dicta, voluptatibus corrupti ipsa illo quibusdam.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ///add comment card/// -->
+        <div class="card sendingCard addCommentCard">
+          <div class="avatar">
+            <img src="/images/avatars/image-amyrobson.png" alt="" />
+          </div>
+          <div class="inputField">
+            <textarea name="" id="" placeholder="Add a comment..."></textarea>
+          </div>
+          <button>send</button>
+        </div>
+        <!-- //////end of card//// -->
+      </div>
+    </div>
     <!-- Pull dynamic content from the data.json file -->
 
     <div class="attribution">

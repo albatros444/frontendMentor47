@@ -1,0 +1,20 @@
+///fonts///
+
+//////
+///colors///
+$mBlue: hsl(238, 40%, 52%); ///moderate blue
+$dBlue: hsl(212, 24%, 26%); //dark blue
+$grayBlue: hsl(211, 10%, 45%); //graish blue
+$lGrayBlue: hsl(239, 57%, 85%); //Light grayish blue
+$lGray: hsl(223, 19%, 93%); //light gray
+$veryLGray: hsl(228, 33%, 97%); //very light gray
+$sRed: hsl(358, 79%, 66%); //soft red
+$pRed: hsl(357, 100%, 86%); //pale red
+$white: hsl(0, 0%, 100%);
+/////
+/////functions///
+// pixels to vw
+@function ptw($scrnWidth, $pxls) {
+  $res: calc($pxls/$scrnWidth * 100vw);
+  @return $res;
+}

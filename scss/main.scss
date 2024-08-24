@@ -1,2 +1,30 @@
+@import "variables";
 @import "globals";
 @import "attribution";
+@import "card";
+@import "sendingCard";
+
+.background {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $veryLGray;
+  .cardsColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 730px;
+  }
+}
+button {
+  display: inline-block;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  background: none;
+}
