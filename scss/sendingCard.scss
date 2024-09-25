@@ -5,23 +5,20 @@
     display: flex;
     justify-content: center;
     flex-shrink: 0;
-    width: 85px;
+    width: 80px;
     img {
       width: 40px;
       height: 40px;
+      margin-top: 5px;
+      margin-left: 8px;
     }
   }
-  .inputField {
-    width: 100%;
-    textarea {
-      width: 100%;
-      min-height: 95px;
-      padding: 10px 15px;
-      resize: none;
-      border: 1px solid $dBlue;
-      border-radius: 6px;
-    }
-  }
+}
+
+.nestedReplyCard {
+  width: 640px;
+}
+.addCommentCard {
   button {
     display: inline-block;
     padding: 0;
@@ -34,7 +31,8 @@
     outline: inherit;
     cursor: pointer;
     font-family: inherit;
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: 500;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -42,11 +40,9 @@
     color: white;
   }
 }
-
-.replyCard {
+.addReplyCard {
+  margin-top: -10px;
 }
-.nestedReplyCard {
+.addReplyToReplyCard {
   width: 640px;
-}
-.addCommentCard {
 }

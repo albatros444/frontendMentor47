@@ -64,6 +64,7 @@ ul {
 .card {
   display: flex;
   width: 100%;
+  min-height: 145px;
   margin-bottom: 20px;
   padding-right: 25px;
   padding-bottom: 25px;
@@ -92,89 +93,101 @@ ul {
   height: 100px;
   width: 40px;
   margin-top: 25px;
-  border-radius: 7px;
+  border-radius: 10px;
   background-color: hsl(228, 33%, 97%);
+}
+.commentCard .votingSec .buttonsBox button img {
+  margin-left: 1px;
 }
 .commentCard .votingSec .buttonsBox p {
   text-align: center;
   font-weight: 500;
   color: hsl(238, 40%, 52%);
 }
+.commentCard .mainSec {
+  width: 100%;
+}
 .commentCard .mainSec__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 70px;
+  padding-top: 7px;
 }
 .commentCard .mainSec__header p {
-  padding-bottom: 6px;
+  padding-bottom: 3px;
 }
 .commentCard .mainSec__header__left {
   display: flex;
   align-items: end;
 }
 .commentCard .mainSec__header__left .avatar {
-  width: 30px;
-  height: 30px;
-  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+  margin-right: 17px;
 }
 .commentCard .mainSec__header__left .name {
   margin-right: 15px;
   font-weight: 500;
   color: hsl(212, 24%, 26%);
 }
+.commentCard .mainSec__header__left .you {
+  height: 19px;
+  width: 35px;
+  border-radius: 2px;
+  align-self: center;
+  background-color: hsl(238, 40%, 52%);
+  margin-right: 14px;
+  margin-left: -4px;
+}
+.commentCard .mainSec__header__left .you p {
+  margin-top: -3px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
 .commentCard .mainSec__header__left .howLongAgo {
   font-weight: 400;
 }
 .commentCard .mainSec__header__right button {
-  padding-bottom: 4px;
   font-size: 17px;
-  font-weight: 600;
-  color: hsl(238, 40%, 52%);
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 .commentCard .mainSec__header__right button img {
   margin-bottom: -2px;
-  padding-right: 8px;
+  padding-right: 4px;
 }
-.commentCard .mainSec .body {
-  padding-bottom: 15px;
+.commentCard .mainSec__header__right .addReplyBtn {
+  padding-bottom: 4px;
+  color: hsl(238, 40%, 52%);
 }
-
-.nestedComment {
-  width: 640px;
+.commentCard .mainSec__header__right .deleteBtn {
+  margin-right: 20px;
+  color: hsl(358, 79%, 66%);
 }
-
-.sendingCard {
-  padding-top: 25px;
+.commentCard .mainSec__header__right .editBtn {
+  color: hsl(238, 40%, 52%);
 }
-.sendingCard .avatar {
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 85px;
+.commentCard .mainSec__header__right .replyToReplyBtn {
+  color: hsl(238, 40%, 52%);
 }
-.sendingCard .avatar img {
-  width: 40px;
-  height: 40px;
-}
-.sendingCard .inputField {
+.commentCard .mainSec__body textarea {
   width: 100%;
 }
-.sendingCard .inputField textarea {
-  width: 100%;
-  min-height: 95px;
-  padding: 10px 15px;
-  resize: none;
-  border: 1px solid hsl(212, 24%, 26%);
-  border-radius: 6px;
+.commentCard .mainSec__body p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
 }
-.sendingCard button {
-  display: inline-block;
+.commentCard .mainSec__body .sendCommentBtn {
+  display: block;
   padding: 0;
   flex-shrink: 0;
   height: 48px;
   width: 104px;
   margin-left: 15px;
+  margin-top: 20px;
   border-radius: 8px;
   border: none;
   outline: inherit;
@@ -187,15 +200,156 @@ ul {
   background-color: hsl(238, 40%, 52%);
   color: white;
 }
+.commentCard .mainSec .updateComment {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.nestedComment {
+  width: 640px;
+}
+.nestedComment span {
+  color: hsl(238, 40%, 52%);
+  font-weight: 600;
+}
+.nestedComment .textarea {
+  width: 100%;
+  min-height: 95px;
+  padding: 10px 15px;
+  resize: none;
+  border: 1px solid hsl(223, 19%, 93%);
+  border-radius: 6px;
+}
+.nestedComment .textarea span {
+  display: inline;
+  color: hsl(212, 24%, 26%);
+  font-weight: 400;
+}
+.nestedComment .textarea p[contenteditable=true] {
+  outline: 0px solid transparent;
+}
+
+.inputField {
+  width: 100%;
+}
+.inputField textarea {
+  width: 100%;
+  min-height: 95px;
+  padding: 12px 22px;
+  resize: none;
+  border: 1px solid hsl(223, 19%, 93%);
+  border-radius: 6px;
+}
+
+.sendingCard {
+  padding-top: 25px;
+}
+.sendingCard .avatar {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 80px;
+}
+.sendingCard .avatar img {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 8px;
+}
 
 .nestedReplyCard {
   width: 640px;
 }
 
+.addCommentCard button {
+  display: inline-block;
+  padding: 0;
+  flex-shrink: 0;
+  height: 48px;
+  width: 104px;
+  margin-left: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: hsl(238, 40%, 52%);
+  color: white;
+}
+
+.addReplyCard {
+  margin-top: -10px;
+}
+
+.addReplyToReplyCard {
+  width: 640px;
+}
+
+.deleteModalBg {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+.deleteModalBg .modal {
+  width: 400px;
+  height: 250px;
+  border-radius: 6px;
+  padding: 34px 30px;
+  background-color: white;
+}
+.deleteModalBg .modal h2 {
+  margin-bottom: 20px;
+  color: hsl(212, 24%, 26%);
+  font-weight: 500;
+}
+.deleteModalBg .modal p {
+  margin-bottom: 17px;
+  line-height: 1.55;
+  color: hsl(211, 10%, 45%);
+}
+.deleteModalBg .modal button {
+  display: inline-block;
+  padding: 0;
+  height: 48px;
+  width: 160px;
+  border-radius: 8px;
+  border: none;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: hsl(238, 40%, 52%);
+  color: white;
+}
+.deleteModalBg .modal .cancelDeletion {
+  margin-right: 10px;
+  background-color: hsl(211, 10%, 45%);
+}
+.deleteModalBg .modal .approveDeletion {
+  background-color: hsl(358, 79%, 66%);
+}
+
 .background {
+  position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  min-height: 100vh;
+  padding-top: 65px;
   padding-bottom: 50px;
   background-color: hsl(228, 33%, 97%);
 }
@@ -216,6 +370,11 @@ button {
   font-family: inherit;
   text-align: center;
   background: none;
+}
+
+.body-modal-open {
+  height: 100vh;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

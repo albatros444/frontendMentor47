@@ -3,11 +3,14 @@
 @import "attribution";
 @import "card";
 @import "sendingCard";
+@import "modal";
 
 .background {
+  position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  min-height: 100vh;
+  padding-top: 65px;
   padding-bottom: 50px;
   background-color: $veryLGray;
   .cardsColumn {
@@ -27,4 +30,8 @@ button {
   font-family: inherit;
   text-align: center;
   background: none;
+}
+.body-modal-open {
+  height: 100vh;
+  overflow: hidden;
 }

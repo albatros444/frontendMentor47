@@ -2,11 +2,13 @@
 .card {
   display: flex;
   width: 100%;
+  min-height: 145px;
   margin-bottom: 20px;
   padding-right: 25px;
   padding-bottom: 25px;
   border-radius: 10px;
   background-color: white;
+
   p {
     flex-shrink: 0;
     font-size: 16px;
@@ -30,9 +32,12 @@
       height: 100px;
       width: 40px;
       margin-top: 25px;
-      border-radius: 7px;
+      border-radius: 10px;
       background-color: $veryLGray;
       button {
+        img {
+          margin-left: 1px;
+        }
       }
       p {
         text-align: center;
@@ -42,21 +47,23 @@
     }
   }
   .mainSec {
+    width: 100%;
     &__header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       min-height: 70px;
+      padding-top: 7px;
       p {
-        padding-bottom: 6px;
+        padding-bottom: 3px;
       }
       &__left {
         display: flex;
         align-items: end;
         .avatar {
-          width: 30px;
-          height: 30px;
-          margin-right: 15px;
+          width: 32px;
+          height: 32px;
+          margin-right: 17px;
         }
 
         .name {
@@ -64,25 +71,87 @@
           font-weight: 500;
           color: $dBlue;
         }
+        .you {
+          height: 19px;
+          width: 35px;
+          border-radius: 2px;
+          align-self: center;
+          background-color: $mBlue;
+          margin-right: 14px;
+          margin-left: -4px;
+          p {
+            margin-top: -3px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+          }
+        }
         .howLongAgo {
           font-weight: 400;
         }
       }
       &__right {
         button {
-          padding-bottom: 4px;
           font-size: 17px;
-          font-weight: 600;
-          color: $mBlue;
+          font-weight: 500;
+          letter-spacing: -0.02em;
+
           img {
             margin-bottom: -2px;
-            padding-right: 8px;
+            padding-right: 4px;
           }
+        }
+        .addReplyBtn {
+          padding-bottom: 4px;
+          color: $mBlue;
+        }
+        .deleteBtn {
+          margin-right: 20px;
+          color: $sRed;
+        }
+        .editBtn {
+          color: $mBlue;
+        }
+        .replyToReplyBtn {
+          color: $mBlue;
         }
       }
     }
-    .body {
-      padding-bottom: 15px;
+
+    &__body {
+      textarea {
+        width: 100%;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+      }
+      .sendCommentBtn {
+        display: block;
+        padding: 0;
+        flex-shrink: 0;
+        height: 48px;
+        width: 104px;
+        margin-left: 15px;
+        margin-top: 20px;
+        border-radius: 8px;
+        border: none;
+        outline: inherit;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 17px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $mBlue;
+        color: white;
+      }
+    }
+    .updateComment {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
     }
   }
 }
@@ -90,4 +159,36 @@
 ///nested comment card
 .nestedComment {
   width: 640px;
+  span {
+    color: $mBlue;
+    font-weight: 600;
+  }
+  .textarea {
+    ///div with class textarea
+    width: 100%;
+    min-height: 95px;
+    padding: 10px 15px;
+    resize: none;
+    border: 1px solid $lGray;
+    border-radius: 6px;
+    span {
+      display: inline;
+      color: $dBlue;
+      font-weight: 400;
+    }
+    p[contenteditable="true"] {
+      outline: 0px solid transparent;
+    }
+  }
+}
+.inputField {
+  width: 100%;
+  textarea {
+    width: 100%;
+    min-height: 95px;
+    padding: 12px 22px;
+    resize: none;
+    border: 1px solid $lGray;
+    border-radius: 6px;
+  }
 }

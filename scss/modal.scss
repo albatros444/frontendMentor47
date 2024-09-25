@@ -1,0 +1,54 @@
+.deleteModalBg {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: hsl(0, 0%, 0%, 50%);
+  .modal {
+    width: 400px;
+    height: 250px;
+    border-radius: 6px;
+    padding: 34px 30px;
+    background-color: white;
+    h2 {
+      margin-bottom: 20px;
+      color: $dBlue;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 17px;
+      line-height: 1.55;
+      color: $grayBlue;
+    }
+
+    button {
+      display: inline-block;
+      padding: 0;
+      height: 48px;
+      width: 160px;
+      border-radius: 8px;
+      border: none;
+      outline: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: $mBlue;
+      color: white;
+    }
+    .cancelDeletion {
+      margin-right: 10px;
+      background-color: $grayBlue;
+    }
+    .approveDeletion {
+      background-color: $sRed;
+    }
+  }
+}

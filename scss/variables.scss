@@ -18,3 +18,6 @@ $white: hsl(0, 0%, 100%);
   $res: calc($pxls/$scrnWidth * 100vw);
   @return $res;
 }
+
+///sass settings///
+/// sass --watch scss/main.scss dist/main.css
