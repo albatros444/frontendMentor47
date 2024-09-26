@@ -24,6 +24,9 @@
     justify-content: center;
     width: 90px;
     flex-shrink: 0;
+    .mobileActionButtons {
+      display: none;
+    }
     .buttonsBox {
       display: flex;
       flex-direction: column;
@@ -158,25 +161,7 @@
         }
       }
     }
-
     &__body {
-      // .textarea {
-      //   ///div with class textarea
-      //   width: 100%;
-      //   min-height: 95px;
-      //   padding: 10px 15px;
-      //   resize: none;
-      //   border: 1px solid $lGray;
-      //   border-radius: 6px;
-      //   span {
-      //     display: inline;
-      //     color: $dBlue;
-      //     font-weight: 400;
-      //   }
-      //   p[contenteditable="true"] {
-      //     outline: 0px solid transparent;
-      //   }
-      // }
       p {
         font-size: 16px;
         line-height: 1.5;
@@ -217,7 +202,8 @@
 
 ///nested comment card
 .nestedComment {
-  width: 640px;
+  width: 93%; //640px;
+
   span {
     color: $mBlue;
     font-weight: 600;
@@ -240,6 +226,9 @@
       outline: 0px solid transparent;
     }
   }
+}
+.nestedComment:last-child {
+  margin-bottom: 0;
 }
 .inputField {
   width: 100%;

@@ -85,6 +85,9 @@ ul {
   width: 90px;
   flex-shrink: 0;
 }
+.commentCard .votingSec .mobileActionButtons {
+  display: none;
+}
 .commentCard .votingSec .buttonsBox {
   display: flex;
   flex-direction: column;
@@ -249,7 +252,7 @@ ul {
 }
 
 .nestedComment {
-  width: 640px;
+  width: 93%;
 }
 .nestedComment span {
   color: hsl(238, 40%, 52%);
@@ -270,6 +273,10 @@ ul {
 }
 .nestedComment .textarea p[contenteditable=true] {
   outline: 0px solid transparent;
+}
+
+.nestedComment:last-child {
+  margin-bottom: 0;
 }
 
 .inputField {
@@ -408,7 +415,17 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: end;
-  width: 730px;
+  max-width: 730px;
+  padding: 0 30px;
+}
+
+.repliesColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border-left: solid 2px hsl(223, 19%, 93%);
+  margin-bottom: 20px;
+  margin-left: 45px;
 }
 
 button {
@@ -426,6 +443,95 @@ button {
 .body-modal-open {
   height: 100vh;
   overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  .background {
+    display: block;
+    min-height: 0;
+    height: 100%;
+    padding-top: 20px;
+  }
+  .background .cardsColumn {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .card {
+    flex-direction: column-reverse;
+    padding-right: 0;
+  }
+  .commentCard .votingSec {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .commentCard .votingSec .mobileActionButtons {
+    display: block;
+  }
+  .commentCard .votingSec .mobileActionButtons button {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+  }
+  .commentCard .votingSec .mobileActionButtons button svg {
+    margin-bottom: -2px;
+    margin-right: 4px;
+  }
+  .commentCard .votingSec .mobileActionButtons .addReplyBtn {
+    padding-bottom: 4px;
+    color: hsl(238, 40%, 52%);
+    transition: all 0.13s ease-in-out;
+  }
+  .commentCard .votingSec .mobileActionButtons .addReplyBtn svg {
+    fill: #5357b6;
+    transition: all 0.13s ease-in-out;
+  }
+  .commentCard .votingSec .mobileActionButtons .addReplyBtn:hover {
+    color: hsl(238, 40%, 82%);
+  }
+  .commentCard .votingSec .mobileActionButtons .addReplyBtn:hover svg {
+    fill: hsl(238, 40%, 82%);
+  }
+  .commentCard .votingSec .mobileActionButtons .deleteBtn {
+    margin-right: 20px;
+    color: hsl(358, 79%, 66%);
+    transition: all 0.13s ease-in-out;
+  }
+  .commentCard .votingSec .mobileActionButtons .deleteBtn svg {
+    fill: hsl(358, 79%, 66%);
+    transition: all 0.13s ease-in-out;
+  }
+  .commentCard .votingSec .mobileActionButtons .deleteBtn:hover {
+    color: hsl(357, 100%, 86%);
+  }
+  .commentCard .votingSec .mobileActionButtons .deleteBtn:hover svg {
+    fill: hsl(357, 100%, 86%);
+  }
+  .commentCard .votingSec .mobileActionButtons .editBtn {
+    color: hsl(238, 40%, 52%);
+    transition: all 0.13s ease-in-out;
+  }
+  .commentCard .votingSec .mobileActionButtons .editBtn svg {
+    fill: hsl(238, 40%, 52%);
+    transition: all 0.13s ease-in-out;
+  }
+  .commentCard .votingSec .mobileActionButtons .editBtn:hover {
+    color: hsl(238, 40%, 82%);
+  }
+  .commentCard .votingSec .mobileActionButtons .editBtn:hover svg {
+    fill: hsl(238, 40%, 82%);
+  }
+  .commentCard .votingSec .mobileActionButtons .replyToReplyBtn {
+    color: hsl(238, 40%, 52%);
+  }
+  .commentCard .mainSec__header__right button {
+    display: none;
+  }
+  .nestedComment {
+    width: 100%;
+  }
+  .nestedReplyCard {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

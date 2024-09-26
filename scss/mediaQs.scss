@@ -1,0 +1,100 @@
+@media screen and (max-width: 500px) {
+  .background {
+    display: block;
+
+    min-height: 0;
+    height: 100%;
+    padding-top: 20px;
+    .cardsColumn {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+  .card {
+    flex-direction: column-reverse;
+    padding-right: 0;
+  }
+  .commentCard {
+    .votingSec {
+      width: 100%;
+      justify-content: space-between;
+      .mobileActionButtons {
+        display: block;
+        button {
+          font-size: 17px;
+          font-weight: 500;
+          letter-spacing: -0.03em;
+          svg {
+            margin-bottom: -2px;
+            margin-right: 4px;
+          }
+        }
+        .addReplyBtn {
+          padding-bottom: 4px;
+          color: $mBlue;
+          transition: $trans;
+          svg {
+            fill: #5357b6;
+            transition: $trans;
+          }
+          &:hover {
+            color: hsl(238, 40%, 82%);
+            svg {
+              fill: hsl(238, 40%, 82%);
+            }
+          }
+        }
+        .deleteBtn {
+          margin-right: 20px;
+          color: $sRed;
+          transition: $trans;
+          svg {
+            fill: $sRed;
+            transition: $trans;
+          }
+          &:hover {
+            color: $pRed;
+            svg {
+              fill: $pRed;
+            }
+          }
+        }
+        .editBtn {
+          color: $mBlue;
+          transition: $trans;
+
+          svg {
+            fill: $mBlue;
+            transition: $trans;
+          }
+          &:hover {
+            color: hsl(238, 40%, 82%);
+            svg {
+              fill: hsl(238, 40%, 82%);
+            }
+          }
+        }
+        .replyToReplyBtn {
+          color: $mBlue;
+        }
+      }
+    }
+    .mainSec {
+      &__header {
+        &__left {
+        }
+        &__right {
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .nestedComment {
+    width: 100%;
+  }
+  .nestedReplyCard {
+    width: 100%;
+  }
+}
