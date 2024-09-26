@@ -96,8 +96,16 @@ ul {
   border-radius: 10px;
   background-color: hsl(228, 33%, 97%);
 }
-.commentCard .votingSec .buttonsBox button img {
+.commentCard .votingSec .buttonsBox button {
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .votingSec .buttonsBox button svg {
   margin-left: 1px;
+  fill: hsl(239, 57%, 85%);
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .votingSec .buttonsBox button:hover svg {
+  fill: hsl(238, 40%, 52%);
 }
 .commentCard .votingSec .buttonsBox p {
   text-align: center;
@@ -152,28 +160,58 @@ ul {
 .commentCard .mainSec__header__right button {
   font-size: 17px;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
-.commentCard .mainSec__header__right button img {
+.commentCard .mainSec__header__right button svg {
   margin-bottom: -2px;
-  padding-right: 4px;
+  margin-right: 4px;
 }
 .commentCard .mainSec__header__right .addReplyBtn {
   padding-bottom: 4px;
   color: hsl(238, 40%, 52%);
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .mainSec__header__right .addReplyBtn svg {
+  fill: #5357b6;
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .mainSec__header__right .addReplyBtn:hover {
+  color: hsl(238, 40%, 82%);
+}
+.commentCard .mainSec__header__right .addReplyBtn:hover svg {
+  fill: hsl(238, 40%, 82%);
 }
 .commentCard .mainSec__header__right .deleteBtn {
   margin-right: 20px;
   color: hsl(358, 79%, 66%);
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .mainSec__header__right .deleteBtn svg {
+  fill: hsl(358, 79%, 66%);
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .mainSec__header__right .deleteBtn:hover {
+  color: hsl(357, 100%, 86%);
+}
+.commentCard .mainSec__header__right .deleteBtn:hover svg {
+  fill: hsl(357, 100%, 86%);
 }
 .commentCard .mainSec__header__right .editBtn {
   color: hsl(238, 40%, 52%);
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .mainSec__header__right .editBtn svg {
+  fill: hsl(238, 40%, 52%);
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .mainSec__header__right .editBtn:hover {
+  color: hsl(238, 40%, 82%);
+}
+.commentCard .mainSec__header__right .editBtn:hover svg {
+  fill: hsl(238, 40%, 82%);
 }
 .commentCard .mainSec__header__right .replyToReplyBtn {
   color: hsl(238, 40%, 52%);
-}
-.commentCard .mainSec__body textarea {
-  width: 100%;
 }
 .commentCard .mainSec__body p {
   font-size: 16px;
@@ -199,6 +237,10 @@ ul {
   text-transform: uppercase;
   background-color: hsl(238, 40%, 52%);
   color: white;
+  transition: all 0.13s ease-in-out;
+}
+.commentCard .mainSec__body .sendCommentBtn:hover {
+  background-color: hsl(239, 57%, 85%);
 }
 .commentCard .mainSec .updateComment {
   display: flex;
@@ -218,7 +260,7 @@ ul {
   min-height: 95px;
   padding: 10px 15px;
   resize: none;
-  border: 1px solid hsl(223, 19%, 93%);
+  border: 1px solid hsl(212, 24%, 26%);
   border-radius: 6px;
 }
 .nestedComment .textarea span {
@@ -240,6 +282,10 @@ ul {
   resize: none;
   border: 1px solid hsl(223, 19%, 93%);
   border-radius: 6px;
+  color: hsl(212, 24%, 26%);
+}
+.inputField textarea:focus {
+  border: 1px solid hsl(212, 24%, 26%);
 }
 
 .sendingCard {
@@ -281,10 +327,14 @@ ul {
   text-transform: uppercase;
   background-color: hsl(238, 40%, 52%);
   color: white;
+  transition: all 0.13s ease-in-out;
+}
+.addCommentCard button:hover {
+  background-color: hsl(239, 57%, 85%);
 }
 
 .addReplyCard {
-  margin-top: -10px;
+  margin-top: -12px;
 }
 
 .addReplyToReplyCard {
@@ -304,9 +354,9 @@ ul {
 }
 .deleteModalBg .modal {
   width: 400px;
-  height: 250px;
-  border-radius: 6px;
-  padding: 34px 30px;
+  height: 255px;
+  border-radius: 8px;
+  padding: 34px 32px;
   background-color: white;
 }
 .deleteModalBg .modal h2 {
@@ -315,8 +365,8 @@ ul {
   font-weight: 500;
 }
 .deleteModalBg .modal p {
-  margin-bottom: 17px;
-  line-height: 1.55;
+  margin-bottom: 20px;
+  line-height: 1.5;
   color: hsl(211, 10%, 45%);
 }
 .deleteModalBg .modal button {
@@ -329,7 +379,8 @@ ul {
   outline: inherit;
   cursor: pointer;
   font-family: inherit;
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;

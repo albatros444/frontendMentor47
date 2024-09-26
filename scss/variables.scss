@@ -12,6 +12,7 @@ $sRed: hsl(358, 79%, 66%); //soft red
 $pRed: hsl(357, 100%, 86%); //pale red
 $white: hsl(0, 0%, 100%);
 /////
+$trans: all 0.13s ease-in-out;
 /////functions///
 // pixels to vw
 @function ptw($scrnWidth, $pxls) {

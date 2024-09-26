@@ -5,6 +5,7 @@ const addReply = (commentDiv, commentData, currentUser, data, parent) => {
   //parent mean commentDiv in case of reply to reply, commentDiv in this case is nestedCommentDiv
   // console.log("commentData", commentData, commentDiv, data);
 
+  const id = uid();
   const replyInputCard = document.createElement("div");
   replyInputCard.classList.add(
     "card",
@@ -18,21 +19,25 @@ const addReply = (commentDiv, commentData, currentUser, data, parent) => {
             <img src="/images/avatars/image-juliusomo.png" alt="" />
           </div>
           <div class="inputField">
-            <textarea name="" class="replyInputField" id="" placeholder="Add a comment..."></textarea>
+            <textarea name="" class="replyInputField textarea${id}" id="" ></textarea>
           </div>
           <button class="sendCommentBtn">reply</button>`;
 
   //add card to dom
   commentDiv.after(replyInputCard);
+  //add @to whom to textarea
+  const textArea = document.querySelector(`.textarea${id}`);
+  textArea.innerText = `@${commentData.user.username}  `;
   //add event listener
   const sendCommentBtn = document.querySelector(".sendCommentBtn");
   const replyInputField = document.querySelector(".replyInputField");
-  const id = uid();
   sendCommentBtn.addEventListener("click", () => {
     //add to data///
+    let editedValue = replyInputField.value.split(" ").splice(1).join(" ");
+
     const newItem = {
       id,
-      content: replyInputField.value,
+      content: editedValue,
       createdAt: "few seconds ago",
       score: 0,
       replyingTo: commentData.user.username,

@@ -38,10 +38,14 @@
     text-transform: uppercase;
     background-color: $mBlue;
     color: white;
+    transition: $trans;
+    &:hover {
+      background-color: $lGrayBlue;
+    }
   }
 }
 .addReplyCard {
-  margin-top: -10px;
+  margin-top: -12px;
 }
 .addReplyToReplyCard {
   width: 640px;

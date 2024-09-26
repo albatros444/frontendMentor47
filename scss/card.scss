@@ -35,8 +35,16 @@
       border-radius: 10px;
       background-color: $veryLGray;
       button {
-        img {
+        transition: $trans;
+        svg {
           margin-left: 1px;
+          fill: $lGrayBlue;
+          transition: $trans;
+        }
+        &:hover {
+          svg {
+            fill: $mBlue;
+          }
         }
       }
       p {
@@ -94,23 +102,56 @@
         button {
           font-size: 17px;
           font-weight: 500;
-          letter-spacing: -0.02em;
-
-          img {
+          letter-spacing: -0.03em;
+          svg {
             margin-bottom: -2px;
-            padding-right: 4px;
+            margin-right: 4px;
           }
         }
         .addReplyBtn {
           padding-bottom: 4px;
           color: $mBlue;
+          transition: $trans;
+          svg {
+            fill: #5357b6;
+            transition: $trans;
+          }
+          &:hover {
+            color: hsl(238, 40%, 82%);
+            svg {
+              fill: hsl(238, 40%, 82%);
+            }
+          }
         }
         .deleteBtn {
           margin-right: 20px;
           color: $sRed;
+          transition: $trans;
+          svg {
+            fill: $sRed;
+            transition: $trans;
+          }
+          &:hover {
+            color: $pRed;
+            svg {
+              fill: $pRed;
+            }
+          }
         }
         .editBtn {
           color: $mBlue;
+          transition: $trans;
+
+          svg {
+            fill: $mBlue;
+            transition: $trans;
+          }
+          &:hover {
+            color: hsl(238, 40%, 82%);
+            svg {
+              fill: hsl(238, 40%, 82%);
+            }
+          }
         }
         .replyToReplyBtn {
           color: $mBlue;
@@ -119,9 +160,23 @@
     }
 
     &__body {
-      textarea {
-        width: 100%;
-      }
+      // .textarea {
+      //   ///div with class textarea
+      //   width: 100%;
+      //   min-height: 95px;
+      //   padding: 10px 15px;
+      //   resize: none;
+      //   border: 1px solid $lGray;
+      //   border-radius: 6px;
+      //   span {
+      //     display: inline;
+      //     color: $dBlue;
+      //     font-weight: 400;
+      //   }
+      //   p[contenteditable="true"] {
+      //     outline: 0px solid transparent;
+      //   }
+      // }
       p {
         font-size: 16px;
         line-height: 1.5;
@@ -146,6 +201,10 @@
         text-transform: uppercase;
         background-color: $mBlue;
         color: white;
+        transition: $trans;
+        &:hover {
+          background-color: $lGrayBlue;
+        }
       }
     }
     .updateComment {
@@ -169,8 +228,9 @@
     min-height: 95px;
     padding: 10px 15px;
     resize: none;
-    border: 1px solid $lGray;
+    border: 1px solid $dBlue;
     border-radius: 6px;
+
     span {
       display: inline;
       color: $dBlue;
@@ -190,5 +250,9 @@
     resize: none;
     border: 1px solid $lGray;
     border-radius: 6px;
+    color: $dBlue;
+    &:focus {
+      border: 1px solid $dBlue;
+    }
   }
 }
