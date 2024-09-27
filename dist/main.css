@@ -310,11 +310,18 @@ ul {
   margin-top: 5px;
   margin-left: 8px;
 }
-
-.nestedReplyCard {
-  width: 640px;
+.sendingCard .sendCommentBtnMob {
+  display: none;
 }
 
+.nestedReplyCard {
+  width: 100%;
+}
+
+.addCommentCard {
+  width: auto;
+  margin: 0 30px;
+}
 .addCommentCard button {
   display: inline-block;
   padding: 0;
@@ -411,7 +418,7 @@ ul {
   padding-bottom: 50px;
   background-color: hsl(228, 33%, 97%);
 }
-.background .cardsColumn {
+.background .cardsAndAddComment .cardsColumn {
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -423,6 +430,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: end;
+  width: 93.5%;
   border-left: solid 2px hsl(223, 19%, 93%);
   margin-bottom: 20px;
   margin-left: 45px;
@@ -452,17 +460,46 @@ button {
     height: 100%;
     padding-top: 20px;
   }
-  .background .cardsColumn {
+  .background .cardsAndAddComment {
+    padding: 15px;
+  }
+  .background .cardsAndAddComment .cardsColumn {
     width: 100%;
-    padding: 0 20px;
+    padding: 0;
+  }
+  .repliesColumn {
+    margin-left: 0;
+    width: 100%;
   }
   .card {
     flex-direction: column-reverse;
-    padding-right: 0;
+    padding: 0 20px;
   }
   .commentCard .votingSec {
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+  .commentCard .votingSec .buttonsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    margin-top: 0;
+  }
+  .commentCard .votingSec .buttonsBox button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+  }
+  .commentCard .votingSec .buttonsBox p {
+    text-align: center;
+    font-weight: 500;
+    color: hsl(238, 40%, 52%);
   }
   .commentCard .votingSec .mobileActionButtons {
     display: block;
@@ -526,11 +563,40 @@ button {
   .commentCard .mainSec__header__right button {
     display: none;
   }
+  .commentCard .mainSec__body {
+    margin-bottom: 20px;
+  }
   .nestedComment {
-    width: 100%;
+    width: 95%;
   }
   .nestedReplyCard {
     width: 100%;
+  }
+  .addCommentCard {
+    width: 100%;
+    margin: 0;
+    padding: 20px 20px;
+  }
+  .addCommentCard .avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .addCommentCard .avatar img {
+    margin-top: 0;
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+  }
+  .addCommentCard textarea {
+    margin-bottom: 20px;
+  }
+  .addCommentCard .sendCommentBtnMob {
+    display: block;
+  }
+  .addCommentCard .sendCommentBtn {
+    display: none;
   }
 }
 

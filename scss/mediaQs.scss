@@ -1,23 +1,52 @@
 @media screen and (max-width: 500px) {
   .background {
     display: block;
-
     min-height: 0;
     height: 100%;
     padding-top: 20px;
-    .cardsColumn {
-      width: 100%;
-      padding: 0 20px;
+    .cardsAndAddComment {
+      padding: 15px;
+      .cardsColumn {
+        width: 100%;
+        padding: 0;
+      }
     }
+  }
+  .repliesColumn {
+    margin-left: 0;
+    width: 100%;
   }
   .card {
     flex-direction: column-reverse;
-    padding-right: 0;
+    padding: 0 20px;
   }
   .commentCard {
     .votingSec {
       width: 100%;
       justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      .buttonsBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100px;
+        height: 40px;
+        margin-top: 0;
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+        }
+        p {
+          text-align: center;
+          font-weight: 500;
+          color: $mBlue;
+        }
+      }
       .mobileActionButtons {
         display: block;
         button {
@@ -89,12 +118,41 @@
           }
         }
       }
+      &__body {
+        margin-bottom: 20px;
+      }
     }
   }
   .nestedComment {
-    width: 100%;
+    width: 95%;
   }
   .nestedReplyCard {
     width: 100%;
+  }
+  .addCommentCard {
+    width: 100%;
+    margin: 0;
+    padding: 20px 20px;
+    .avatar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      img {
+        margin-top: 0;
+        margin-left: 0;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    textarea {
+      margin-bottom: 20px;
+    }
+    .sendCommentBtnMob {
+      display: block;
+    }
+    .sendCommentBtn {
+      display: none;
+    }
   }
 }

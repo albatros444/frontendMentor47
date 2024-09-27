@@ -13,7 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
       textarea.value = "";
       //add comment
       const sendButton = document.querySelector(".sendCommentBtn");
+      const sendButtonMob = document.querySelector(".sendCommentBtnMob");
+
       sendButton.addEventListener("click", () => {
+        addComment(data, uid());
+      });
+      sendButtonMob.addEventListener("click", () => {
         addComment(data, uid());
       });
     });

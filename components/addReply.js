@@ -17,6 +17,7 @@ const addReply = (commentDiv, commentData, currentUser, data, parent) => {
   replyInputCard.innerHTML = `
           <div class="avatar">
             <img src="/images/avatars/image-juliusomo.png" alt="" />
+            <button class=" sendCommentBtnMob">reply</button>
           </div>
           <div class="inputField">
             <textarea name="" class="replyInputField textarea${id}" id="" ></textarea>
@@ -30,8 +31,11 @@ const addReply = (commentDiv, commentData, currentUser, data, parent) => {
   textArea.innerText = `@${commentData.user.username}  `;
   //add event listener
   const sendCommentBtn = document.querySelector(".sendCommentBtn");
+  const sendCommentBtnMob = document.querySelector(".sendCommentBtnMob");
   const replyInputField = document.querySelector(".replyInputField");
-  sendCommentBtn.addEventListener("click", () => {
+  //////////function for send reply to comment mobile and desktop
+  const sendReply = () => {
+    console.log("click");
     //add to data///
     let editedValue = replyInputField.value.split(" ").splice(1).join(" ");
 
@@ -75,6 +79,10 @@ const addReply = (commentDiv, commentData, currentUser, data, parent) => {
         thisItem.createdAt = "10 minutes ago";
       }
     }, 5000);
-  });
+  };
+
+  sendCommentBtn.addEventListener("click", () => sendReply());
+  sendCommentBtnMob.addEventListener("click", () => sendReply());
+  console.log(sendCommentBtnMob);
 };
 export default addReply;

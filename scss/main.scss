@@ -14,18 +14,21 @@
   padding-top: 65px;
   padding-bottom: 50px;
   background-color: $veryLGray;
-  .cardsColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    max-width: 730px;
-    padding: 0 30px;
+  .cardsAndAddComment {
+    .cardsColumn {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      max-width: 730px;
+      padding: 0 30px;
+    }
   }
 }
 .repliesColumn {
   display: flex;
   flex-direction: column;
   align-items: end;
+  width: 93.5%;
   border-left: solid 2px $lGray;
   margin-bottom: 20px;
   margin-left: 45px;

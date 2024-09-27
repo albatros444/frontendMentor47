@@ -2,7 +2,7 @@ import render from "./render.js";
 const addComment = (data, uid) => {
   const inputField = document.querySelector("textarea");
 
-  console.log(uid);
+  // console.log(uid);
 
   ///add to data////
 
@@ -18,15 +18,15 @@ const addComment = (data, uid) => {
 
   render(data);
   inputField.value = "";
-  const thisItem = data.comments.find((item) => item.id === uid);
 
   ////////////time stamp/////////
+  const thisItem = data.comments.find((item) => item.id === uid);
   const startTime = new Date();
   const delInterval = setInterval(() => {
     const howLongAgo = document.querySelector(`.howLongAgo${uid}`);
     const currTime = new Date();
     let diff = currTime - startTime;
-    console.log("tick", uid, diff);
+    // console.log("tick", uid, diff);
     if (diff > 30000 && diff < 60000) {
       howLongAgo.innerText = "half a minute ago";
       thisItem.createdAt = "half a minute ago";
