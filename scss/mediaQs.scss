@@ -117,6 +117,9 @@
         padding-top: 0;
         min-height: 63px;
         &__left {
+          .avatar {
+            margin-right: 17px;
+          }
           .name {
             font-size: 17px;
           }
