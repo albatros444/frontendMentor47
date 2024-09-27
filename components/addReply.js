@@ -35,14 +35,13 @@ const addReply = (commentDiv, commentData, currentUser, data, parent) => {
   const replyInputField = document.querySelector(".replyInputField");
   //////////function for send reply to comment mobile and desktop
   const sendReply = () => {
-    console.log("click");
     //add to data///
     let editedValue = replyInputField.value.split(" ").splice(1).join(" ");
 
     const newItem = {
       id,
       content: editedValue,
-      createdAt: "few seconds ago",
+      createdAt: "few sec ago",
       score: 0,
       replyingTo: commentData.user.username,
       user: currentUser,
@@ -62,21 +61,21 @@ const addReply = (commentDiv, commentData, currentUser, data, parent) => {
       const currTime = new Date();
       let diff = currTime - startTime;
       if (diff > 30000 && diff < 60000) {
-        howLongAgo.innerText = "half a minute ago";
-        thisItem.createdAt = "half a minute ago";
+        howLongAgo.innerText = "30 sec ago";
+        thisItem.createdAt = "30 sec ago";
       }
       if (diff > 60000 && diff < 120000) {
-        howLongAgo.innerText = "1 minute ago";
-        thisItem.createdAt = "1 minute ago";
+        howLongAgo.innerText = "1 min ago";
+        thisItem.createdAt = "1 min ago";
       }
       if (diff > 60000 && diff < 60000 * 10) {
         const mins = Math.floor(diff / 60000);
-        howLongAgo.innerText = `${mins} minutes ago`;
-        thisItem.createdAt = `${mins} minutes ago`;
+        howLongAgo.innerText = `${mins} min ago`;
+        thisItem.createdAt = `${mins} min ago`;
       }
       if (diff > 60000 * 10) {
-        howLongAgo.innerText = "10 minutes ago";
-        thisItem.createdAt = "10 minutes ago";
+        howLongAgo.innerText = "10 min ago";
+        thisItem.createdAt = "10 min ago";
       }
     }, 5000);
   };

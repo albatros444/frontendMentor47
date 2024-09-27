@@ -66,7 +66,7 @@ ul {
   width: 100%;
   min-height: 145px;
   margin-bottom: 20px;
-  padding-right: 25px;
+  padding-right: 1.7361111111vw;
   padding-bottom: 25px;
   border-radius: 10px;
   background-color: white;
@@ -82,7 +82,9 @@ ul {
 .commentCard .votingSec {
   display: flex;
   justify-content: center;
-  width: 90px;
+  width: 6.25vw;
+  min-width: 70px;
+  max-width: 95px;
   flex-shrink: 0;
 }
 .commentCard .votingSec .mobileActionButtons {
@@ -135,7 +137,7 @@ ul {
 .commentCard .mainSec__header__left .avatar {
   width: 32px;
   height: 32px;
-  margin-right: 17px;
+  margin-right: 1.1805555556vw;
 }
 .commentCard .mainSec__header__left .name {
   margin-right: 15px;
@@ -143,12 +145,13 @@ ul {
   color: hsl(212, 24%, 26%);
 }
 .commentCard .mainSec__header__left .you {
+  flex-shrink: 0;
   height: 19px;
   width: 35px;
   border-radius: 2px;
   align-self: center;
   background-color: hsl(238, 40%, 52%);
-  margin-right: 14px;
+  margin-right: 0.9722222222vw;
   margin-left: -4px;
 }
 .commentCard .mainSec__header__left .you p {
@@ -159,6 +162,13 @@ ul {
 }
 .commentCard .mainSec__header__left .howLongAgo {
   font-weight: 400;
+  margin-right: 15px;
+}
+.commentCard .mainSec__header__right {
+  display: flex;
+  justify-content: end;
+  flex-basis: 145px;
+  flex-shrink: 3;
 }
 .commentCard .mainSec__header__right button {
   font-size: 17px;
@@ -185,7 +195,7 @@ ul {
   fill: hsl(238, 40%, 82%);
 }
 .commentCard .mainSec__header__right .deleteBtn {
-  margin-right: 20px;
+  margin-right: 1.3888888889vw;
   color: hsl(358, 79%, 66%);
   transition: all 0.13s ease-in-out;
 }
@@ -348,11 +358,12 @@ ul {
 }
 
 .addReplyCard {
-  margin-top: -12px;
+  width: 100%;
+  margin: -12px 0 20px;
 }
 
 .addReplyToReplyCard {
-  width: 640px;
+  width: 93%;
 }
 
 .deleteModalBg {
@@ -433,7 +444,7 @@ ul {
   width: 93.5%;
   border-left: solid 2px hsl(223, 19%, 93%);
   margin-bottom: 20px;
-  margin-left: 45px;
+  margin-left: 3.125vw;
 }
 
 button {
@@ -453,12 +464,13 @@ button {
   overflow: hidden;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .background {
     display: block;
     min-height: 0;
     height: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 14px;
   }
   .background .cardsAndAddComment {
     padding: 15px;
@@ -473,10 +485,12 @@ button {
   }
   .card {
     flex-direction: column-reverse;
-    padding: 0 20px;
+    padding: 0 17px;
+    margin-bottom: 17px;
   }
   .commentCard .votingSec {
     width: 100%;
+    max-width: none;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 15px;
@@ -489,6 +503,7 @@ button {
     width: 100px;
     height: 40px;
     margin-top: 0;
+    margin-right: 7px;
   }
   .commentCard .votingSec .buttonsBox button {
     display: flex;
@@ -529,7 +544,7 @@ button {
     fill: hsl(238, 40%, 82%);
   }
   .commentCard .votingSec .mobileActionButtons .deleteBtn {
-    margin-right: 20px;
+    margin-right: 12px;
     color: hsl(358, 79%, 66%);
     transition: all 0.13s ease-in-out;
   }
@@ -560,11 +575,24 @@ button {
   .commentCard .votingSec .mobileActionButtons .replyToReplyBtn {
     color: hsl(238, 40%, 52%);
   }
+  .commentCard .mainSec__header {
+    padding-top: 0;
+    min-height: 63px;
+  }
+  .commentCard .mainSec__header__left .name {
+    font-size: 17px;
+  }
+  .commentCard .mainSec__header__left .howLongAgo {
+    font-size: 17px;
+  }
+  .commentCard .mainSec__header__left .you {
+    margin-right: 12px;
+  }
   .commentCard .mainSec__header__right button {
     display: none;
   }
   .commentCard .mainSec__body {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .nestedComment {
     width: 95%;
@@ -575,7 +603,7 @@ button {
   .addCommentCard {
     width: 100%;
     margin: 0;
-    padding: 20px 20px;
+    padding: 16px 16px;
   }
   .addCommentCard .avatar {
     display: flex;
@@ -590,13 +618,52 @@ button {
     height: 30px;
   }
   .addCommentCard textarea {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .addCommentCard .sendCommentBtnMob {
     display: block;
   }
   .addCommentCard .sendCommentBtn {
     display: none;
+  }
+  .addReplyCard {
+    margin: -10px 0 20px;
+  }
+  .addReplyToReplyCard {
+    width: 95%;
+  }
+  .deleteModalBg {
+    padding: 0 15px;
+  }
+  .deleteModalBg .modal {
+    height: auto;
+    padding: 25px;
+  }
+  .deleteModalBg .modal h2 {
+    font-size: 20px;
+  }
+  .deleteModalBg .modal .modalButtons {
+    display: flex;
+  }
+  .deleteModalBg .modal .modalButtons button {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .commentCard .votingSec .mobileActionButtons .addReplyBtn {
+    font-size: 15px;
+  }
+  .commentCard .votingSec .mobileActionButtons .deleteBtn {
+    font-size: 15px;
+  }
+  .commentCard .votingSec .mobileActionButtons .editBtn {
+    font-size: 15px;
+  }
+  .commentCard .mainSec__header__left .howLongAgo {
+    font-size: 14px;
+    padding-bottom: 4px;
   }
 }
 

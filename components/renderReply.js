@@ -6,10 +6,9 @@ import { upvoteDownvote } from "./upvoteDownvote.js";
 export default function renderReply(reply, comment, data) {
   // const cardsColumn = document.querySelector(".cardsColumn");
   const repliesColumn = document.querySelector(`.repliesColumn${comment.id}`);
-
   const isOwnReply = reply.user.username === data.currentUser.username;
-
   let nestedCommentDiv = document.createElement("div");
+
   nestedCommentDiv.classList.add("card", "commentCard", "nestedComment");
   isOwnReply && nestedCommentDiv.classList.add("ownReply");
   nestedCommentDiv.innerHTML = `  <div class="votingSec">

@@ -4,7 +4,7 @@
   width: 100%;
   min-height: 145px;
   margin-bottom: 20px;
-  padding-right: 25px;
+  padding-right: ptw(1440, 25); //25px;
   padding-bottom: 25px;
   border-radius: 10px;
   background-color: white;
@@ -22,7 +22,9 @@
   .votingSec {
     display: flex;
     justify-content: center;
-    width: 90px;
+    width: ptw(1440, 90); //90px;
+    min-width: 70px;
+    max-width: 95px;
     flex-shrink: 0;
     .mobileActionButtons {
       display: none;
@@ -74,7 +76,7 @@
         .avatar {
           width: 32px;
           height: 32px;
-          margin-right: 17px;
+          margin-right: ptw(1440, 17);
         }
 
         .name {
@@ -83,12 +85,13 @@
           color: $dBlue;
         }
         .you {
+          flex-shrink: 0;
           height: 19px;
           width: 35px;
           border-radius: 2px;
           align-self: center;
           background-color: $mBlue;
-          margin-right: 14px;
+          margin-right: ptw(1440, 14);
           margin-left: -4px;
           p {
             margin-top: -3px;
@@ -99,9 +102,15 @@
         }
         .howLongAgo {
           font-weight: 400;
+          margin-right: 15px;
+          // max-width: 100px;
         }
       }
       &__right {
+        display: flex;
+        justify-content: end;
+        flex-basis: 145px;
+        flex-shrink: 3;
         button {
           font-size: 17px;
           font-weight: 500;
@@ -127,7 +136,7 @@
           }
         }
         .deleteBtn {
-          margin-right: 20px;
+          margin-right: ptw(1440, 20); //20px;
           color: $sRed;
           transition: $trans;
           svg {

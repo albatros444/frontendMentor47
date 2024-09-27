@@ -31,7 +31,7 @@
   width: 93.5%;
   border-left: solid 2px $lGray;
   margin-bottom: 20px;
-  margin-left: 45px;
+  margin-left: ptw(1440, 45); //45px;
 }
 
 button {

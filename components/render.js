@@ -105,10 +105,16 @@ let render = (data) => {
         const editBtn = document.querySelector(
           `.editBtn${commentAndReplies.id}`
         );
+        const editBtnMob = document.querySelector(
+          `.editBtn${commentAndReplies.id}mob`
+        );
         const mainSec__body = document.querySelector(
           `.mainSec__body${commentAndReplies.id}`
         );
         editBtn.addEventListener("click", () => {
+          editComment(mainSec__body, commentAndReplies, data);
+        });
+        editBtnMob.addEventListener("click", () => {
           editComment(mainSec__body, commentAndReplies, data);
         });
       }
@@ -117,7 +123,13 @@ let render = (data) => {
         const deleteBtn = document.querySelector(
           `.deleteBtn${commentAndReplies.id}`
         );
+        const deleteBtnMob = document.querySelector(
+          `.deleteBtn${commentAndReplies.id}mob`
+        );
         deleteBtn.addEventListener("click", () =>
+          deleteCommentReply("comment", commentAndReplies, data)
+        );
+        deleteBtnMob.addEventListener("click", () =>
           deleteCommentReply("comment", commentAndReplies, data)
         );
       }
@@ -141,12 +153,14 @@ let render = (data) => {
         });
       }
       ////render replies/////
-      const repliesColumn = document.createElement("div");
-      repliesColumn.classList.add(
-        "repliesColumn",
-        `repliesColumn${commentAndReplies.id}`
-      );
-      cardsColumn.appendChild(repliesColumn);
+      if (commentAndReplies.replies.length > 0) {
+        const repliesColumn = document.createElement("div");
+        repliesColumn.classList.add(
+          "repliesColumn",
+          `repliesColumn${commentAndReplies.id}`
+        );
+        cardsColumn.appendChild(repliesColumn);
+      }
 
       commentAndReplies.replies.map((reply) => {
         renderReply(reply, commentAndReplies, data);

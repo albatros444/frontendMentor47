@@ -1,6 +1,7 @@
 import render from "./render.js";
 export default function editComment(cardBodyLink, comment, data) {
   ///create and add input field
+  console.log("edit");
   const textAreaBox = document.createElement("div");
   textAreaBox.classList.add("inputField");
   const textArea = document.createElement("textarea");
